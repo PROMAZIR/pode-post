@@ -1,49 +1,68 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Pode-Post</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="PODE-POST ">
+    <meta name="description" content="Venha compartilhar momentos especiais!">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pode-postar.bercho.com.br/">
+    <meta property="og:title" content="PODE-POST">
+    <meta property="og:description" content="Venha compartilhar momentos especiais!">
+    <meta property="og:image" content="https://i.ibb.co/NnkCqYXY/Aesthetic-Music-Playlist-Ui-Phone-Wallpapers.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://pode-postar.bercho.com.br/">
+    <meta name="twitter:title" content="PODE-POST ">
+    <meta name="twitter:description" content="Venha compartilhar momentos especiais!">
+    <meta name="twitter:image" content="hhttps://i.ibb.co/NnkCqYXY/Aesthetic-Music-Playlist-Ui-Phone-Wallpapers.png">
+
     <style>
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
             width: 100%;
-            overflow-x: hidden;
-            overflow-y: auto;
+            height: 100%;
+            overflow: hidden;
+            position: fixed;
         }
 
-        .iframe-container {
-            position: relative;
+        .frame-container {
             width: 100%;
-            height: 100vh;
-            overflow: hidden;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
         }
 
         iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
             border: none;
-            overflow: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        @media screen and (max-width: 768px) {
-            .iframe-container {
-                height: 100dvh;
-            }
+            position: absolute;
+            top: 0;
+            left: 0;
         }
     </style>
 </head>
 <body>
-    <div class="iframe-container">
-        <iframe src="https://script.google.com/macros/s/AKfycbw-WCVrrI3EWJ4Eh2QuBYdpWJ8w8A3RZaesfg20IUCHgQHqEd3p74Ti_Gdq7IZw7FXF/exec" allow="autoplay; fullscreen"></iframe>
-    </div>
-</body>
-</html>
+    <div class="frame-container">
+    <iframe 
+        src="https://script.google.com/macros/s/AKfycbw-WCVrrI3EWJ4Eh2QuBYdpWJ8w8A3RZaesfg20IUCHgQHqEd3p74Ti_Gdq7IZw7FXF/exec"
+        allow="autoplay"
+        allowfullscreen
+        sandbox="allow-scripts allow-same-origin allow-forms">
+    </iframe>
+</div>
 </body>
 </html>
