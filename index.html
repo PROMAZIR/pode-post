@@ -816,3 +816,46 @@
         
         // Verificar conexão inicial
         checkConnection();
+        
+        // Função para forçar a atualização do Google Apps Script
+        function forceGoogleAppsScriptUpdate() {
+            // Adicionar timestamp para evitar cache
+            const timestamp = new Date().getTime();
+            const currentSrc = appFrame.src;
+            const baseUrl = currentSrc.split('?')[0];
+            
+            // Recarregar o iframe com novo timestamp
+            appFrame.src = `${baseUrl}?t=${timestamp}`;
+            
+            // Mostrar a tela de carregamento novamente
+            loadingScreen.style.display = 'flex';
+        }
+        
+        // Função para mostrar toast de notificação
+        function showToast(message, duration = 3000) {
+            // Verificar se já existe um toast
+            let toast = document.getElementById('toast-notification');
+            
+            // Se não existir, criar um novo
+            if (!toast) {
+                toast = document.createElement('div');
+                toast.id = 'toast-notification';
+                document.body.appendChild(toast);
+            }
+            
+            // Definir a mensagem
+            toast.textContent = message;
+            
+            // Mostrar o toast
+            toast.style.bottom = '20px';
+            toast.style.opacity = '1';
+            
+            // Esconder após a duração especificada
+            setTimeout(() => {
+                toast.style.bottom = '-50px';
+                toast.style.opacity = '0';
+            }, duration);
+        }
+    </script>
+</body>
+</html>
